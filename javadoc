@@ -1,0 +1,26 @@
+
+/** This line defines a new class called HelloApplication that extends the Application class. This is the entry point of the JavaFX application.*/
+public class HelloApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    /** This MAIN METHOD (This is the SUMMARY DESCRIPTION of the method documentation section bc of 1st sentence). This SECOND SENTENCE DESCRIBES the : DETAIL SECTION: and this method is the first method that gets called when you run your java program.*/
+    public static void main(String[] args) {
+        launch();
+    }
+
+    /**This METHOD,  displays a message.
+     This Method DESCRIPTION is: message is a greeting.
+     @param message DESCRIPTION is this variable is a message
+     @return DESCRIPTION: Returns "Hello World
+     */
+    public static String displayMessage(String message){
+        return "Hello World";
+    }
+}
